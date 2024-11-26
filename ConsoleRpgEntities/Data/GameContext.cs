@@ -68,6 +68,19 @@ namespace ConsoleRpgEntities.Data
                 //.OnDelete(DeleteBehavior.Restrict)  // Prevents cascading deletes to avoid conflict
                 .IsRequired(false);
 
+            modelBuilder.Entity<Equipment>()
+                .HasOne(e => e.Potion)  // Define the relationship to the Armor item
+                .WithMany()            // No need for reverse navigation back to Equipment
+                .HasForeignKey(e => e.PotionId)  // Sets ArmorId as the foreign key in Equipment
+                                        //.OnDelete(DeleteBehavior.Restrict)  // Prevents cascading deletes to avoid conflict
+                .IsRequired(false);
+
+            modelBuilder.Entity<Equipment>()
+                .HasOne(e => e.Accessory)  // Define the relationship to the Armor item
+                .WithMany()            // No need for reverse navigation back to Equipment
+                .HasForeignKey(e => e.AccessoryId)  // Sets ArmorId as the foreign key in Equipment
+                                         //.OnDelete(DeleteBehavior.Restrict)  // Prevents cascading deletes to avoid conflict
+                .IsRequired(false);
             // Explanation of Why DeleteBehavior.Restrict:
             // Cascade paths occur when there are multiple relationships in one table pointing to another,
             // each with cascading delete behavior. SQL Server restricts such configurations to prevent 

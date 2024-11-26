@@ -1,0 +1,1 @@
+﻿UPDATE Players SET MaxWeight = 0;

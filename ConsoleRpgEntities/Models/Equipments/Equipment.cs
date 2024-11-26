@@ -10,6 +10,8 @@ public class Equipment
     // so Entity Framework will assume DeleteBehavior.Cascade for relationships
     public int? WeaponId { get; set; }  // Nullable to avoid cascade issues
     public int? ArmorId { get; set; }   // Nullable to avoid cascade issues
+    public int? PotionId { get; set; }  // Nullable to avoid cascade issues
+    public int? AccessoryId { get; set; }   // Nullable to avoid cascade issues
 
     // Navigation properties
     [ForeignKey("WeaponId")]
@@ -17,4 +19,11 @@ public class Equipment
 
     [ForeignKey("ArmorId")]
     public virtual Item Armor { get; set; }
+    // Navigation properties
+
+    [ForeignKey("PotionId")]
+    public virtual Item Potion { get; set; }
+
+    [ForeignKey("AccessoryId")]
+    public virtual Item Accessory { get; set; }
 }

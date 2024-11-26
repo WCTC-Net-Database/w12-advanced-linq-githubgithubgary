@@ -1,0 +1,1 @@
+﻿UPDATE Items SET PlayerId = 1 WHERE Id IN (14,17,24,86,123);

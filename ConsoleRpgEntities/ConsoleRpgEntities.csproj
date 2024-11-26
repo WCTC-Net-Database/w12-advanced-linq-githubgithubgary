@@ -19,17 +19,41 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Migrations\Scripts\AddMorePlayerItems.rollback.sql" />
+    <None Remove="Migrations\Scripts\AddMorePlayerItems.sql" />
     <None Remove="Migrations\Scripts\InitialSeedData.rollback.sql" />
     <None Remove="Migrations\Scripts\InitialSeedData.sql" />
     <None Remove="Migrations\Scripts\SeedEquipment.rollback.sql" />
     <None Remove="Migrations\Scripts\SeedEquipment.rollback.sql~RF8555f2c5.TMP" />
     <None Remove="Migrations\Scripts\SeedEquipment.sql" />
+    <None Remove="Migrations\Scripts\SeedPlayerMaxWeight.rollback.sql" />
+    <None Remove="Migrations\Scripts\SeedPlayerMaxWeight.sql" />
+    <None Remove="Migrations\Scripts\SetPlayerIdonItem.rollback.sql" />
+    <None Remove="Migrations\Scripts\SetPlayerIdonItem.sql" />
     <None Remove="Models\Abilities\Ability.cs~RF7a28a58b.TMP" />
     <None Remove="Models\Attributes\ITargetable.cs~RF7fb34c69.TMP" />
     <None Remove="Models\Equipments\Inventory.cs~RFae3eb4d5.TMP" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Migrations\Scripts\AddMorePlayerItems.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Scripts\AddMorePlayerItems.rollback.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Scripts\SetPlayerIdonItem.rollback.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Scripts\SetPlayerIdonItem.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Scripts\SeedPlayerMaxWeight.rollback.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Migrations\Scripts\SeedPlayerMaxWeight.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Migrations\Scripts\SeedEquipment.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -56,8 +80,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+    <PackageReference Include="NReco.Logging.File" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Migrations\20241124050512_SetPlayerIdonItem.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

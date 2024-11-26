@@ -84,7 +84,7 @@ VALUES
     ('Potion of Fire Resistance', 'Potion', 0, 4, 0.5, 85),
     ('Golem Armor', 'Armor', 0, 42, 20.0, 1300),
     ('Hammer of Thunder', 'Weapon', 44, 0, 11.5, 1300),
-       ('Cape of Shadows', 'Armor', 0, 15, 1.7, 450),
+    ('Cape of Shadows', 'Armor', 0, 15, 1.7, 450),
     ('Potion of Ice Resistance', 'Potion', 0, 4, 0.4, 90),
     ('Spectral Blade', 'Weapon', 40, 3, 6.0, 1020),
     ('Bone Shield', 'Armor', 0, 20, 8.2, 400),
